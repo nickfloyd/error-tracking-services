@@ -10,10 +10,11 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 })
 
 module.exports = {
-  devtool: 'source-map',
-  entry: './src/index.js',
+  devtool: "source-map",
+  entry: "./src/index",
   output: {
-    sourceMapFilename: 'index.map.js'
+      pathinfo: true,
+      path: __dirname,
   },
   module: {
     rules: [

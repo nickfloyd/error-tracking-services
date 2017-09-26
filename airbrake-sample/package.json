@@ -14,10 +14,9 @@
     "webpack-dev-server": "^2.8.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --watch --progress --colors",
-    "build": "react-scripts build --config ./webpack.conf.js --env.major --env.minor --env.patch",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "webpack-dev-server -d --open --watch --progress --colors",
+    "build": "react-scripts build -d --config ./webpack.conf.js --env.major --env.minor --env.patch",
+    "test": "react-scripts test --env=jsdom"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
