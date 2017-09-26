@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --watch --progress --colors",
-    "build": "react-scripts build",
+    "build": "react-scripts build --config ./webpack.conf.js --env.major --env.minor --env.patch",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
@@ -23,6 +23,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-react": "^6.24.1",
+    "webpack-auto-inject-version": "^1.0.0"
   }
 }

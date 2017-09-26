@@ -8,17 +8,20 @@ var airbrake = new airbrakeJs({
   projectKey: process.env.REACT_APP_AIRBRAKE_PROJECT_KEY
 });
 airbrake.addFilter(function (notice) {
-  notice.context.environment = 'production';
+  notice.context.sourceMaps = {
+    '*': 'http://localhost:8080/build/static/js/main.8a60d87b.js.map', // for all files
+  };
+  notice.context.environment = 'development';
   return notice;
 });
 
-try {
-  // This will throw if the document has no head tag
-  document.head.insertBefore(document.createElement('style'));
-} catch(err) {
-  airbrake.notify(err);
-  throw err;
-}
+// try {
+//   // This will throw if the document has no head tag
+//   document.head.insertBefore(document.createElement('style'));
+// } catch(err) {
+//   airbrake.notify(err);
+//   throw err;
+// }
 
 class App extends Component {
   render() {
