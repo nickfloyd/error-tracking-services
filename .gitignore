@@ -1,6 +1,7 @@
 # Local Files
 .DS_Store
 .vscode/*
+dist/*
 
 # Logs
 logs
