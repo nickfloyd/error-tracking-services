@@ -1,5 +1,4 @@
-<!-- [AIV]  Version: 28.0.0 - Tuesday, September 26th, 2017, 4:14:39 PM  --> 
- <!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,7 +8,7 @@
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <link rel="shortcut icon" href="./favicon.ico">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -21,24 +20,27 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-    <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
-    <script>Raven.config('https://c37d537308964b9f93138972ac90647e@sentry.io/222462').install()</script>
+    <script type="text/javascript">
+      !function(a,b,c,d,e,f,g,h){a.RaygunObject=e,a[e]=a[e]||function(){
+      (a[e].o=a[e].o||[]).push(arguments)},f=b.createElement(c),g=b.getElementsByTagName(c)[0],
+      f.async=1,f.src=d,g.parentNode.insertBefore(f,g),h=a.onerror,a.onerror=function(b,c,d,f,g){
+      h&&h(b,c,d,f,g),g||(g=new Error(b)),a[e].q=a[e].q||[],a[e].q.push({
+      e:g})}}(window,document,"script","//cdn.raygun.io/raygun4js/raygun.min.js","rg4js");
+  </script>
+
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <!-- <script>
+      throw new Error("blarg!")
+    </script> -->
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  <script type="text/javascript" src="bundle.js"></script></body>
+    <script type="text/javascript">
+      rg4js('apiKey', '<%= process.env.REACT_APP_RAYGUN_API_KEY %>');
+      rg4js('enableCrashReporting', true);
+    </script>
+  </body>
 </html>
- 

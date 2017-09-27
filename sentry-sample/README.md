@@ -11,5 +11,5 @@
     * ex. `export REACT_APP_SENTRY_RAVEN_ENDPOINT=https://mykey@sentry.io/111111`
   * `REACT_APP_SENTRY_API_KEY`
     * ex. `export REACT_APP_SENTRY_API_KEY=1111111111111111111111111111111111111111`
-4. `npm i && npm build`
+4. `npm i && npm run build`
 5. `npm start`
